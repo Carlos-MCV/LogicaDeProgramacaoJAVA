@@ -25,9 +25,12 @@ public class ExercícioIMC {
         int peso=teclado.nextInt();
         System.out.println("Digite sua altura: ");
         float altura=teclado.nextFloat();
+        String msgsobrepeso=". Infelizmente você está com sobrepeso!!!";//atribuição de um texto a váriavel msg sobrepeso utilizando a classe String
+        String msg="!!!";
         float imc=(float)Math.pow(altura,2);//Math.pow vai dar a potenciação
         float imc1=peso/imc;
-        System.out.println("Seu imc é: "+imc1);
+        String msgfinal=(imc1>=30)?msgsobrepeso:msg;
+        System.out.printf("Seu imc, %s, é de: %f%s \n",nome,imc1,msgfinal);
     }
     
 }
